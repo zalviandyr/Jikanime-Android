@@ -50,7 +50,7 @@ object Utilities {
 
         val parseFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss+ss:ss")
         val localDateTime = LocalDateTime.parse(date, parseFormatter)
-        val formatter = DateTimeFormatter.ofPattern("dd LLL yyyy")
+        val formatter = DateTimeFormatter.ofPattern("dd LLL yy")
         return localDateTime.format(formatter)
     }
 }
