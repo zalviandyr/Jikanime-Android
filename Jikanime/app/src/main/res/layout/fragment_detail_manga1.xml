@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="40dp"
+    android:theme="@style/ScrollEdge">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:id="@+id/detailManga1Frag_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:theme="@style/ScrollEdge">
+
+                        <TextView
+                            android:id="@+id/detailManga1Frag_tvSynopsis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="end"
+                            android:text="@string/lorem" />
+                    </androidx.core.widget.NestedScrollView>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/detailManga1Frag_imageView"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:elevation="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icons8_no_image_100"
+                    app:shapeAppearanceOverlay="@style/ImageShape" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/detailManga1Frag_fabFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="60dp"
+                    android:backgroundTint="@color/colorMain"
+                    app:borderWidth="0dp"
+                    app:elevation="20dp"
+                    app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detailManga1Frag_tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    tools:text="Kimetsu no yaiba" />
+
+                <RatingBar
+                    android:id="@+id/detailManga1Frag_ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailManga1Frag_tvTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:elevation="10dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="@color/colorWarning"
+                    android:rating="3.7"
+                    android:secondaryProgressTint="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/detailManga1Frag_tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailManga1Frag_tvTitle"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/detailManga1Frag_ratingBar"
+                    tools:text="8.71" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTitle"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/rank"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/detailManga1Frag_tvRank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:textSize="20sp"
+                            tools:text="40" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTitle"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/type"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/detailManga1Frag_tvType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:textSize="20sp"
+                            tools:text="TV" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTitle"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/chapter"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/detailManga1Frag_tvChapter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:textSize="20sp"
+                            tools:text="207" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTitle"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/volumes"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/detailManga1Frag_tvVolumes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:textSize="20sp"
+                            tools:text="26" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/score_by"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:text="@string/double_dot"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detailManga1Frag_tvScoreBy"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_gravity="fill_horizontal"
+                    android:textSize="20sp"
+                    tools:text="55.452" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/status"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:text="@string/double_dot"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detailManga1Frag_tvStatus"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_gravity="fill_horizontal"
+                    android:textSize="20sp"
+                    tools:text="Finished airing" />
+
+                <TextView
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/published"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:text="@string/double_dot"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detailManga1Frag_tvPublished"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_gravity="fill_horizontal"
+                    android:textSize="20sp"
+                    tools:text="6 May 2019 - 28 Sept 2019" />
+            </GridLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/detailManga1Frag_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorMain" />
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    androidExtensions {
+        experimental = true
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.zukron.jikanime"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Adding
+    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'com.google.android.material:material:1.2.1'
+
+    // Circular Image
+    def circular_image_version = "3.1.0"
+    implementation "de.hdodenhof:circleimageview:$circular_image_version"
+
+    // Glide
+    def glide_version = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Three Ten
+    def three_tan_version = "1.2.4"
+    implementation "com.jakewharton.threetenabp:threetenabp:$three_tan_version"
+
+    // Paging
+    def paging_version = "2.1.2"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    // Lifecycle and view model
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // Retrofit2
+    def retrofit2_version = "2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofit2_version"
+
+    // OK Http
+    def ok_http_version = "4.8.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:$ok_http_version"
+    implementation "com.squareup.okhttp3:okhttp:$ok_http_version"
+
+    // RX java
+    def rx_java_version = "3.0.6"
+    implementation "io.reactivex.rxjava3:rxjava:$rx_java_version"
+
+    // Rx android
+    def rx_android_version = "3.0.0"
+    implementation "io.reactivex.rxjava3:rxandroid:$rx_android_version"
+
+    // View pager dot indicator
+    def dot_indicator_version = "4.1.2"
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:$dot_indicator_version"
+
+    // Room
+    def room_version = "2.3.0-alpha02"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava3:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+}

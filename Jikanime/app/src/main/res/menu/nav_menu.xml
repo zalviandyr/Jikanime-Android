@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/anime">
+        <menu>
+            <item
+                android:id="@+id/nav_top_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_crown_64"
+                android:title="@string/top" />
+            <item
+                android:id="@+id/nav_spring_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_spring_64"
+                android:title="@string/spring" />
+            <item
+                android:id="@+id/nav_summer_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_summer_64"
+                android:title="@string/summer" />
+            <item
+                android:id="@+id/nav_fall_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_autumn_64"
+                android:title="@string/fall" />
+            <item
+                android:id="@+id/nav_winter_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_winter_64"
+                android:title="@string/winter" />
+            <item
+                android:id="@+id/nav_genre_anime"
+                android:checkable="true"
+                android:icon="@drawable/icons8_ska_64"
+                android:title="@string/genre" />
+        </menu>
+    </item>
+    <item android:title="@string/manga">
+        <menu>
+            <item
+                android:id="@+id/nav_top_manga"
+                android:checkable="true"
+                android:icon="@drawable/icons8_crown_64"
+                android:title="@string/top" />
+            <item
+                android:id="@+id/nav_genre_manga"
+                android:checkable="true"
+                android:icon="@drawable/icons8_ska_64"
+                android:title="@string/genre" />
+        </menu>
+    </item>
+    <item android:title="@string/other">
+        <menu>
+            <item
+                android:id="@+id/nav_favorite_other"
+                android:checkable="true"
+                android:icon="@drawable/icons8_favorite_folder_64"
+                android:title="@string/favorite" />
+        </menu>
+    </item>
+</menu>

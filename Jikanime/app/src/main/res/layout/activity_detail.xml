@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainAlpha30"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/detailAct_materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_scrollFlags="scroll"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:titleTextAppearance="@style/TextAppearance.Toolbar"
+            app:titleTextColor="@android:color/tab_indicator_text" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_overlay_second"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/detailAct_viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/ScrollEdge"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center">
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_overlay_third" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/detailAct_dotsIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:dotsColor="@color/colorCardStroke"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:progressMode="true"
+            app:selectedDotColor="@android:color/holo_blue_bright" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

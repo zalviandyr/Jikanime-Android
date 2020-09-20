@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <ProgressBar
+            android:id="@+id/contentFrag_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackOverlay" />
+
+        <TextView
+            android:id="@+id/contentFrag_tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contentFrag_progressBar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:visibility="gone"
+            tools:text="Text error" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contentFrag_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ScrollEdge"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+        android:id="@+id/detailCharacter1Frag_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:strokeColor="@color/colorCardStroke"
+                app:strokeWidth="1dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:theme="@style/ScrollEdge">
+
+                    <TextView
+                        android:id="@+id/detailCharacter1Frag_tvAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="end"
+                        android:text="@string/lorem" />
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detailCharacter1Frag_imageView"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:elevation="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icons8_no_image_100"
+                app:shapeAppearanceOverlay="@style/ImageShape" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/detailCharacter1Frag_tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            tools:text="Kimetsu no yaiba" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/detailCharacter1Frag_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorMain" />
+</FrameLayout>

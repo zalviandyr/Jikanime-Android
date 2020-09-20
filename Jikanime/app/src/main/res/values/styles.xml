@@ -1,0 +1,35 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:fontFamily">@font/segoe_ui</item>
+        <item name="android:statusBarColor">@color/colorMain</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="ScrollEdge">
+        <item name="android:colorEdgeEffect">@android:color/darker_gray</item>
+    </style>
+
+    <style name="ImageShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+    
+    <!--  Text Appearance  -->
+    <style name="TextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/segoe_ui_bold</item>
+        <item name="android:fontFamily">@font/segoe_ui_bold</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar" parent="TextAppearance">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Tab" parent="TextAppearance">
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

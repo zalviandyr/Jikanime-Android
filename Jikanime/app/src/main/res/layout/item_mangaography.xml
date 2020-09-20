@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/mangaographyItem_imageView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/example"
+                app:shapeAppearanceOverlay="@style/ImageShape"
+                app:strokeColor="@color/colorCardStroke"
+                app:strokeWidth="1dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/mangaographyItem_imageView"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:id="@+id/mangaographyItem_tvName"
+                    android:layout_width="1dp"
+                    android:layout_row="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="fill"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    tools:text="Kimetsu no yaiba" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="@string/role"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="fill"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="@string/double_dot"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/mangaographyItem_tvRole"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_gravity="fill"
+                    android:textColor="@android:color/black"
+                    tools:text="main" />
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/mangaographyItem_imageView"
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/detail"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_detail" />
+
+        <FrameLayout
+            android:id="@+id/mangaographyItem_flSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_overlay"
+            android:visibility="gone">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:columnCount="3"
+                android:useDefaultMargins="true"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mangaographyItem_btnBack"
+                    android:backgroundTint="@color/colorWarning"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:text="@string/back"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="20dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mangaographyItem_btnMyanimelist"
+                    android:backgroundTint="@color/colorInfo"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:text="@string/myanimelist"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="20dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mangaographyItem_btnDetail"
+                    android:backgroundTint="@color/colorSuccess"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:text="@string/detail"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="20dp" />
+            </GridLayout>
+        </FrameLayout>
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

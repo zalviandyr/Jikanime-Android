@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorMain">#916DE9</color>
+    <color name="colorMainAlpha70">#B3916DE9</color>
+    <color name="colorMainAlpha40">#40916DE9</color>
+    <color name="colorMainAlpha30">#4D916DE9</color>
+    <color name="colorWarning">#F3C864</color>
+    <color name="colorBackOverlay">#E67E7E7E</color>
+    <color name="colorInfo">#7AA3E9</color>
+    <color name="colorSuccess">#3DF34F</color>
+    <color name="colorTitle">#4D5778B2</color>
+    <color name="colorCardStroke">#707070</color>
+</resources>
