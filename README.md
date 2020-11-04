@@ -1,7 +1,10 @@
 # Android Project
 
 **Name :** Jikanime
-<br>
+
 **API Server**
-<br>
-https://jikan.docs.apiary.io/
+
+-   https://jikan.docs.apiary.io/
+
+**Screenshot**
+![screenshot](https://raw.githubusercontent.com/zalviandyr/Jikanime-Android/master/Screenshot/Jikanime%20-%20Android.jpg)
